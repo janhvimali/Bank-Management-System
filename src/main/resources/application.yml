@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: loan-service
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+        instance:
+          prefer-ip: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
